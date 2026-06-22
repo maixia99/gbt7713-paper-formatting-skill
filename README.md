@@ -1,2 +1,28 @@
-# gbt7713-paper-formatting-skill
-基于 GB/T 7713.2-2022 的学术论文排版与合规性审查 AI 技能（Prompt/Agent 指令）
+# GB/T 7713.2-2022 学术论文排版与审查 Skill
+
+这是一个专为学术论文排版和合规性审查打造的 AI 技能（Prompt/Agent 指令）。本技能完全对标最新版《GB/T 7713.2-2022 学术论文编写规则》国家标准，将繁杂的编排格式转化为大模型可严格执行的操作指令。
+
+## ✨ 核心能力
+
+本 Skill 支持 4 种工作模式：
+* **full (完整生成)**：从零开始生成符合国标结构（前置部分+正文）的论文草稿。
+* **check (合规审查)**：对已有论文进行“像素级”格式体检，输出详细的 Checklist 整改报告。
+* **guided (写作指导)**：苏格拉底式引导，协助完成论文结构规划。
+* **quick-ref (标准速查)**：随时提问国标中的具体细节（如“图表怎么编号”、“单位怎么留空”）。
+
+## 🚀 如何使用
+
+### 方式一：直接在 ChatGPT / Claude / Gemini 中使用
+1. 打开 [skills/gbt7713_2_2022_formatter.md](skills/gbt7713_2_2022_formatter.md) 文件。
+2. 复制全部内容，作为 System Prompt 或直接发送给 AI。
+3. 附上你的论文草稿，输入类似指令：“请使用 check 模式，检查我的这段草稿”。
+
+### 方式二：在 Agent 框架中集成
+本 Prompt 头部的 YAML 元数据设计完全兼容标准 Agent 框架（如 LangChain、AutoGen 等）。你可以直接读取并注册为工具。
+
+## 📂 文件说明
+* `/skills`: 存放核心 Prompt 模板文件。
+* `/examples`: 存放 API 调用示例脚本。
+
+## 📜 协议
+MIT License
